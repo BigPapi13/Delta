@@ -31,8 +31,8 @@ function delta:api/launch_xyz
 While this library is likely the closest we've gotten to perfect player motion manipulation, there are some limitations worth mentioning:
 - **Resource pack**: The included resource pack removes *all* explosion sounds and particles to clean up the creeper explosions used to push the player. If you'd like to contribute to fixing this issue, please reach out to me!
 - **Lag**: While this pack will consistently apply the same amount of motion regardless of lag, the client may update the player's motion between creeper explosions, causing the player's position to jitter. This only occurs under very strenuous conditions, but it is still worth mentioning.
-- **Creative exploits**: When applying motion to a player, they are put into creative for less than a tick. There is an incredibly small chance if there is a massive lag spike in that split second that a player may take an item out of the creative inventory. Once again, very rare but still worrisome.
 - **MSPT Inconsistency**: Even though the motion applied is constant, the rate at which the server and client update may vary, and calling motion updates per tick may result in inconsistencies when these variations become too large. This could likely be remedied with worldborder checking, but I decided not to include it in this library for compatibility reasons.
+- **Advancement inconsistencies**: Some advancements will trigger their reward functions *after* entities are processed for the tick, meaning the player has a tick to move around before the explosion occurs, resulting in major inconsistencies in the motion applied. This can be fixed by scheduling the command to be run the next tick.
 - **Spigot/Paper**: This pack uses negative explosion radius creepers, which do not affect player motion on spigot or paper servers
 - **Peaceful mode**: Currently, delta does not work in peaceful difficulty
 
