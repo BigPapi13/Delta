@@ -1,0 +1,8 @@
+{
+	"parent" : "item/generated",
+	"display" : {
+		"ground" : {
+			"scale" : [3.75, 3.75, 0.001]
+		}
+	}
+}

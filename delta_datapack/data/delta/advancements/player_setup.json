@@ -5,7 +5,7 @@
       }
     },
     "rewards": {
-      "function": "delta:internal/initialize_player"
+      "function": "delta:internal/technical/initialize_player"
     }
   }
   

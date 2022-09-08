@@ -11,7 +11,7 @@
       }
     },
     "rewards": {
-      "function": "delta:internal/pre_explosion_subtick"
+      "function": "delta:internal/subtick/pre_explosion_trigger"
     }
   }
   

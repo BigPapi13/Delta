@@ -1,5 +1,6 @@
 {
     "values" : [
-        "delta:internal/load"
+        "delta:internal/technical/load",
+        "random:private/load"
     ]
 }
