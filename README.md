@@ -35,7 +35,7 @@ scoreboard players operation $temp delta.internal.id = @s delta.internal.id
 execute as @e[type=creeper,tag=delta.init] at @s run function delta:internal/summon/initialize_creepers
 function delta:internal/subtick/end_launch_context
 ```
-*Note: Creepers with an `ExplosionRadius` of -1 are recommended for more powerful pushes, and 1 weaker ones. The direction of the push is determined by the angle from the creeper's feet to the player's eyes. You can place as many summon commands as you want, as long as they are between the launch context functions, which **must** be ran from a player. Make sure to summon the creeper 1000 blocks *above* where you want it to spawn.
+*Note: Creepers with an `ExplosionRadius` of -1 are recommended for more powerful pushes, and 1 for weaker ones. The direction of the push is determined by the angle from the creeper's feet to the player's eyes. You can place as many summon commands as you want, as long as they are between the launch context functions, which **must** be ran from a player. Make sure to summon the creeper 1000 blocks *above* where you want it to spawn.
 
 ## Replicating explosion effects
 If you choose to remove the explosion sounds and particles with the resource pack, you can still use those effects with the following API calls:
@@ -43,10 +43,10 @@ If you choose to remove the explosion sounds and particles with the resource pac
 # Creates a single explosion particle
 function delta:api/explosion_particle
 
-#Creates an explosion emitter, which is what creepers and TNT display when they explode
+# Creates an explosion emitter, which is what creepers and TNT display when they explode
 function delta:api/explosion_emitter_particle
 
-#Creates an explosion emitter, which is what creepers and TNT display when they explode
+# Plays an explosion sound
 function delta:api/explosion_sound
 ```
 
