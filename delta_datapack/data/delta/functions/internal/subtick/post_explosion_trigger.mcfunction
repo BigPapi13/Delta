@@ -13,7 +13,7 @@ gamemode spectator @s[scores={delta.internal.gamemode=2}]
 gamemode survival @s[scores={delta.internal.gamemode=3}]
 
 #Any entities ignoring the explosion are returned to normal
-execute as @e[tag=delta.shifted] at @s run function delta:internal/subtick/unshift_entity
+execute as @e[type=!player,tag=delta.shifted] at @s run function delta:internal/subtick/unshift_entity
 execute as @a[tag=delta.ignored_player] run function delta:internal/subtick/end_ignore_player
 
 #Revert mobgriefing gamerule if necessary

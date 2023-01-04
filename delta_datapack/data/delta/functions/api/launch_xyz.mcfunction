@@ -12,11 +12,11 @@
 
 
 #Get looking angle and strength
-summon marker ~ ~ ~ {Tags:["delta.xyz_helper"]}
-execute as @e[type=marker,tag=delta.xyz_helper] run function delta:internal/math/xyz_to_polar_wrapper
+summon marker ~ ~ ~ {UUID:[I;88,66,22,11]}
+execute as 00000058-0000-0042-0000-00160000000b run function delta:internal/math/xyz_to_polar_wrapper
 
 #Launch
-execute rotated as @e[type=marker,tag=delta.xyz_helper] run function delta:api/launch_looking
+execute rotated as 00000058-0000-0042-0000-00160000000b run function delta:api/launch_looking
 
 #Kill marker
-kill @e[type=marker,tag=delta.xyz_helper]
+kill 00000058-0000-0042-0000-00160000000b
