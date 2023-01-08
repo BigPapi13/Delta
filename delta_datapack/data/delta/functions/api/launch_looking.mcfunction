@@ -16,7 +16,7 @@ function delta:internal/subtick/begin_launch_context
 function delta:internal/math/get_angle
 
 #Summon creepers
-execute anchored eyes positioned ^ ^ ^ as @e[type=marker,tag=delta.temp_marker] run function delta:internal/summon/summon_creepers
+execute anchored eyes positioned ^ ^ ^ as 000000eb-0000-00eb-0000-000c00000017 run function delta:internal/summon/summon_creepers
 scoreboard players operation $temp delta.internal.id = @s delta.internal.id
 execute as @e[type=creeper,tag=delta.init] at @s run function delta:internal/summon/initialize_creepers
 

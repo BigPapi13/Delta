@@ -34,6 +34,7 @@ scoreboard players operation $input delta.internal.math -= $d delta.internal.mat
 function delta:internal/math/sqrt
 
 #Get atan2
-summon marker ~ ~ ~ {Tags:["delta.temp_marker"]}
+
+summon marker ~ ~ ~ {UUID:[I;235,235,12,23]}
 scoreboard players operation $adjusted_strength delta.internal.math /= #constant.2 delta.internal.math
-execute as @e[type=marker,tag=delta.temp_marker,limit=1] at @s run function delta:internal/math/arcsin_wrapper
+execute as 000000eb-0000-00eb-0000-000c00000017 at @s run function delta:internal/math/arcsin_wrapper
