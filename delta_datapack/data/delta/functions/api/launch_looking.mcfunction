@@ -15,6 +15,10 @@ function delta:internal/subtick/begin_launch_context
 #Figure out offset angle to get reduced motion
 function delta:internal/math/get_angle
 
+#Check if peaceful
+execute store result score $diff delta.internal.gamemode run difficulty
+execute if score $diff delta.internal.gamemode matches 0 run difficulty easy
+
 #Summon creepers
 execute anchored eyes positioned ^ ^ ^ as 000000eb-0000-00eb-0000-000c00000017 run function delta:internal/summon/summon_creepers
 scoreboard players operation $temp delta.internal.id = @s delta.internal.id

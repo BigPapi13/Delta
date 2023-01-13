@@ -18,3 +18,5 @@ execute as @a[tag=delta.ignored_player] run function delta:internal/subtick/end_
 
 #Revert mobgriefing gamerule if necessary
 execute if score $temp delta.internal.mobgriefing matches 1 run gamerule mobGriefing true
+#Revert difficulty if necessary
+execute if score $diff delta.internal.gamemode matches 0 run difficulty peaceful
