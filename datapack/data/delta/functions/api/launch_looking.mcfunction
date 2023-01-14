@@ -20,7 +20,7 @@ execute store result score $diff delta.internal.gamemode run difficulty
 execute if score $diff delta.internal.gamemode matches 0 run difficulty easy
 
 #Summon creepers
-execute anchored eyes positioned ^ ^ ^ as 000000eb-0000-00eb-0000-000c00000017 run function delta:internal/summon/summon_creepers
+execute anchored eyes positioned ^ ^ ^ as ba8a076c-9a37-49bb-bead-79c12d22458a run function delta:internal/summon/summon_creepers
 scoreboard players operation $temp delta.internal.id = @s delta.internal.id
 execute as @e[type=creeper,tag=delta.init] at @s run function delta:internal/summon/initialize_creepers
 

@@ -35,6 +35,8 @@ function delta:internal/math/sqrt
 
 #Get atan2
 #Angle Marker
-summon marker ~ ~ ~ {UUID:[I;235,235,12,23]}
+#summon marker ~ ~ ~ {UUID:[I;235,235,12,23]}
+tp ba8a076c-9a37-49bb-bead-79c12d22458a ~ ~ ~
 scoreboard players operation $adjusted_strength delta.internal.math /= #constant.2 delta.internal.math
-execute as 000000eb-0000-00eb-0000-000c00000017 at @s run function delta:internal/math/arcsin_wrapper
+#execute as 000000eb-0000-00eb-0000-000c00000017 at @s run function delta:internal/math/arcsin_wrapper
+execute as ba8a076c-9a37-49bb-bead-79c12d22458a at @s run function delta:internal/math/arcsin_wrapper
