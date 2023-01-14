@@ -12,10 +12,8 @@
 
 
 #Get looking angle and strength
-summon marker ~ ~ ~ {UUID:[I;88,66,22,11]}
-execute as 00000058-0000-0042-0000-00160000000b run function delta:internal/math/xyz_to_polar_wrapper
+#Strength Marker here
+tp d59ee2c6-58c8-4885-b9db-ecff066e4439 ~ ~ ~
+execute as d59ee2c6-58c8-4885-b9db-ecff066e4439 run function delta:internal/math/xyz_to_polar_wrapper
 
-execute rotated as 00000058-0000-0042-0000-00160000000b run function delta:api/launch_looking
-
-#Kill marker
-kill 00000058-0000-0042-0000-00160000000b
+execute rotated as d59ee2c6-58c8-4885-b9db-ecff066e4439 run function delta:api/launch_looking
