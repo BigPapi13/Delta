@@ -58,6 +58,5 @@ While this library is likely the closest we've gotten to perfect player motion m
 - **MSPT Inconsistency**: Even though the motion applied is constant, the rate at which the server and client update may vary, and calling motion updates per tick may result in inconsistencies when these variations become too large. This could likely be remedied with worldborder checking, but I decided not to include it in this library for compatibility reasons.
 - **Advancement inconsistencies**: Some advancements will trigger their reward functions *after* entities are processed for the tick, meaning the player has a tick to move around before the explosion occurs, resulting in major inconsistencies in the motion applied. This can be fixed by scheduling the command to be run the next tick.
 - **Spigot/Paper**: ~~This pack uses negative explosion radius creepers, which do not affect player motion on spigot or paper servers.~~ To make this pack work on paper, Nico314159 has made a fix here: https://github.com/Nico314159/Paper-Negative-Explosions
-- **Peaceful mode**: Currently, delta does not work in peaceful difficulty
 
 If you know any possible solutions or would like to help fixing these problems, please let me know!
