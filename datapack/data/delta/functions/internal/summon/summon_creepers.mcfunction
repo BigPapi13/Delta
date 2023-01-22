@@ -19,3 +19,6 @@ execute store result entity @s Rotation[1] float 0.000001 run scoreboard players
 
 scoreboard players operation $creepers_remaining delta.internal.math = $creeper_count delta.internal.math
 execute rotated as @s positioned ^ ^ ^-0.01 run function delta:internal/summon/summon_creepers_recursive
+
+#Tp back to forceloaded chunks
+tp @s 0.0 0 0.0
