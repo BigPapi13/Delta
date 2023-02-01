@@ -1,6 +1,9 @@
 #> delta:internal/technical/load
 #   Sets up scores and teams
 
+# Definitions for Data-pack Helper Plus
+#declare storage delta:storage
+
 #SCORES
 scoreboard objectives add delta.internal.gametime dummy
 scoreboard objectives add delta.api.launch dummy
@@ -17,6 +20,10 @@ scoreboard objectives add delta.internal.math dummy
 scoreboard objectives add delta.internal.motion.x dummy
 scoreboard objectives add delta.internal.motion.y dummy
 scoreboard objectives add delta.internal.motion.z dummy
+scoreboard objectives add delta.internal.uuid.0 dummy
+scoreboard objectives add delta.internal.uuid.1 dummy
+scoreboard objectives add delta.internal.uuid.2 dummy
+scoreboard objectives add delta.internal.uuid.3 dummy
 scoreboard objectives add delta.internal.id dummy
 scoreboard objectives add delta.api.x dummy
 scoreboard objectives add delta.api.y dummy

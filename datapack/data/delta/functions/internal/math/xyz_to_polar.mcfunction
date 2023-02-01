@@ -2,18 +2,23 @@
 #   Takes xyz coordinates, returns a looking direction and magnitude
 
 #Move entity to end of vector
-execute store result entity @s Pos[0] double 0.0001 run scoreboard players get $x delta.api.launch
-execute store result entity @s Pos[1] double 0.0001 run scoreboard players get $y delta.api.launch
-execute store result entity @s Pos[2] double 0.0001 run scoreboard players get $z delta.api.launch
+data modify storage delta:storage Pos set value [0d,0d,0d]
+execute store result storage delta:storage Pos[0] double 0.0001 run scoreboard players get $x delta.api.launch
+execute store result storage delta:storage Pos[1] double 0.0001 run scoreboard players get $y delta.api.launch
+execute store result storage delta:storage Pos[2] double 0.0001 run scoreboard players get $z delta.api.launch
+data modify entity @s Pos set from storage delta:storage Pos
+data remove storage delta:storage Pos
 
 #Get looking direction
 execute facing entity @s feet run tp @s ~ ~ ~ ~ ~
 execute rotated as @s run tp @s ^ ^ ^1
 
 #Get unit vector
-execute store result score $unit.x delta.internal.math run data get entity @s Pos[0] 1000
-execute store result score $unit.y delta.internal.math run data get entity @s Pos[1] 1000
-execute store result score $unit.z delta.internal.math run data get entity @s Pos[2] 1000
+data modify storage delta:storage Pos set from entity @s Pos
+execute store result score $unit.x delta.internal.math run data get storage delta:storage Pos[0] 1000
+execute store result score $unit.y delta.internal.math run data get storage delta:storage Pos[1] 1000
+execute store result score $unit.z delta.internal.math run data get storage delta:storage Pos[2] 1000
+data remove storage delta:storage Pos
 
 #Use absolute value
 execute if score $unit.x delta.internal.math matches ..-1 run scoreboard players operation $unit.x delta.internal.math *= #constant.-1 delta.internal.math

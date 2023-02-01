@@ -5,13 +5,15 @@
 #   > delta:internal/effects/particle/explosion_emitter/spawn_recursive_particles
 
 #Get random position
+data modify storage delta:storage Pos set value [0d,0d,0d]
+
 scoreboard players set $min random 0
 scoreboard players set $max random 256
 function random:uniform
 scoreboard players operation $spawn.x delta.internal.math = $out random
 function random:uniform
 scoreboard players operation $spawn.x delta.internal.math -= $out random
-execute store result entity @s Pos[0] double 0.015625 run scoreboard players operation $spawn.x delta.internal.math += @s delta.api.x
+execute store result storage delta:storage Pos[0] double 0.015625 run scoreboard players operation $spawn.x delta.internal.math += @s delta.api.x
 
 scoreboard players set $min random 0
 scoreboard players set $max random 256
@@ -19,7 +21,7 @@ function random:uniform
 scoreboard players operation $spawn.y delta.internal.math = $out random
 function random:uniform
 scoreboard players operation $spawn.y delta.internal.math -= $out random
-execute store result entity @s Pos[1] double 0.015625 run scoreboard players operation $spawn.y delta.internal.math += @s delta.api.y
+execute store result storage delta:storage Pos[1] double 0.015625 run scoreboard players operation $spawn.y delta.internal.math += @s delta.api.y
 
 scoreboard players set $min random 0
 scoreboard players set $max random 256
@@ -27,7 +29,10 @@ function random:uniform
 scoreboard players operation $spawn.z delta.internal.math = $out random
 function random:uniform
 scoreboard players operation $spawn.z delta.internal.math -= $out random
-execute store result entity @s Pos[2] double 0.015625 run scoreboard players operation $spawn.z delta.internal.math += @s delta.api.z
+execute store result storage delta:storage Pos[2] double 0.015625 run scoreboard players operation $spawn.z delta.internal.math += @s delta.api.z
+
+data modify entity @s Pos set from storage delta:storage Pos
+data remove storage delta:storage Pos
 
 #Summon snowball
 execute at @s run summon snowball ~ ~ ~ {Tags:["delta.explosion_particle","delta.explosion_particle.init"],NoGravity:1b,Item:{id:"minecraft:lingering_potion",Count:1b,tag:{CustomModelData:130000,CustomPotionColor:16777215}}}
