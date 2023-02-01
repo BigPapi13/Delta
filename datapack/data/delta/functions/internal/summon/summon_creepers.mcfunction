@@ -21,4 +21,4 @@ scoreboard players operation $creepers_remaining delta.internal.math = $creeper_
 execute rotated as @s positioned ^ ^ ^-0.01 run function delta:internal/summon/summon_creepers_recursive
 
 #Tp back to forceloaded chunks
-tp @s 0.0 0 0.0
+execute in overworld run tp @s 0.0 0 0.0

@@ -11,11 +11,5 @@
 #   player is launched in the specified direction
 
 
-#Get looking angle and strength
-tp d59ee2c6-58c8-4885-b9db-ecff066e4439 ~ ~ ~
-
 execute as d59ee2c6-58c8-4885-b9db-ecff066e4439 run function delta:internal/math/xyz_to_polar_wrapper
 execute rotated as d59ee2c6-58c8-4885-b9db-ecff066e4439 run function delta:api/launch_looking
-
-#Tp back to forceloaded chunks
-tp d59ee2c6-58c8-4885-b9db-ecff066e4439 0.0 0 0.0
