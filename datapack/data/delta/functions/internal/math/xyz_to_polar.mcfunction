@@ -2,9 +2,12 @@
 #   Takes xyz coordinates, returns a looking direction and magnitude
 
 #Move entity to end of vector
-execute store result entity @s Pos[0] double 0.0001 run scoreboard players get $x delta.api.launch
-execute store result entity @s Pos[1] double 0.0001 run scoreboard players get $y delta.api.launch
-execute store result entity @s Pos[2] double 0.0001 run scoreboard players get $z delta.api.launch
+data modify storage delta:storage Pos set value [0d,0d,0d]
+execute store result storage delta:storage Pos[0] double 0.0001 run scoreboard players get $x delta.api.launch
+execute store result storage delta:storage Pos[1] double 0.0001 run scoreboard players get $y delta.api.launch
+execute store result storage delta:storage Pos[2] double 0.0001 run scoreboard players get $z delta.api.launch
+data modify entity @s Pos set from storage delta:storage Pos
+data remove storage delta:storage Pos
 
 #Get looking direction
 execute facing entity @s feet run tp @s ~ ~ ~ ~ ~
