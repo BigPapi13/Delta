@@ -11,9 +11,11 @@ execute facing entity @s feet run tp @s ~ ~ ~ ~ ~
 execute rotated as @s run tp @s ^ ^ ^1
 
 #Get unit vector
-execute store result score $unit.x delta.internal.math run data get entity @s Pos[0] 1000
-execute store result score $unit.y delta.internal.math run data get entity @s Pos[1] 1000
-execute store result score $unit.z delta.internal.math run data get entity @s Pos[2] 1000
+data modify storage delta:storage Pos set from entity @s Pos
+execute store result score $unit.x delta.internal.math run data get storage delta:storage Pos[0] 1000
+execute store result score $unit.y delta.internal.math run data get storage delta:storage Pos[1] 1000
+execute store result score $unit.z delta.internal.math run data get storage delta:storage Pos[2] 1000
+data remove storage delta:storage Pos
 
 #Use absolute value
 execute if score $unit.x delta.internal.math matches ..-1 run scoreboard players operation $unit.x delta.internal.math *= #constant.-1 delta.internal.math
