@@ -1,5 +1,5 @@
 #> delta:internal/subtick/post_explosion_trigger
-#   Runs comands as the player immediately after the creeper explosion has been processed
+#   Runs commands as the player immediately after the creeper explosion has been processed
 #
 # Callers:
 #   > delta:post_explosion_trigger (advancement)
@@ -16,7 +16,7 @@ gamemode survival @s[scores={delta.internal.gamemode=3}]
 execute anchored eyes positioned ^ ^ ^ positioned ~-2.5 ~-2.5 ~-2.5 align xyz as @e[type=!player,tag=delta.shifted,dx=4,dy=4,dz=4] at @s run function delta:internal/subtick/unshift_entity
 execute anchored eyes positioned ^ ^ ^ positioned ~-2.5 ~-2.5 ~-2.5 align xyz as @a[tag=!delta.ignore,dx=4,dy=4,dz=4] run function delta:internal/subtick/end_ignore_player
 
-#Revert mobgriefing gamerule if necessary
+#Revert mobGriefing gamerule if necessary
 execute if score $temp delta.internal.mobgriefing matches 1 run gamerule mobGriefing true
 #Revert difficulty if necessary
 execute if score $diff delta.internal.gamemode matches 0 run difficulty peaceful

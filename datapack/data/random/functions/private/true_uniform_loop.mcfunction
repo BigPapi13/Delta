@@ -4,7 +4,7 @@
 #
 # @private
 # @within random:true_uniform
-# @winthin random:private/true_uniform_loop
+# @within random:private/true_uniform_loop
 
 # Xn+1 = (aXn + c) mod m
 scoreboard players operation #lcg random *= #lcg_a random

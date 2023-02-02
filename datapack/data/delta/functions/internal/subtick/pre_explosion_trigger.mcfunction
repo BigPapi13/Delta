@@ -1,5 +1,5 @@
 #> delta:internal/subtick/pre_explosion_trigger
-#   Runs comands as the player after all other entity processing has occurred and before the explosion has occurred
+#   Runs commands as the player after all other entity processing has occurred and before the explosion has occurred
 #
 # Callers:
 #   > delta:pre_explosion_trigger (advancement)
@@ -23,7 +23,7 @@ tag @s add delta.ignore
 execute anchored eyes positioned ^ ^ ^ positioned ~-1.5 ~-1.5 ~-1.5 align xyz as @a[tag=!delta.ignore,dx=2,dy=2,dz=2] at @s run function delta:internal/subtick/ignore_player
 tag @s remove delta.ignore
 
-#Teleport creeepers down
+#Teleport creepers down
 scoreboard players operation $temp delta.internal.id = @s delta.internal.id
 execute anchored eyes positioned ^ ^ ^ positioned ~ ~1000 ~ as @e[type=creeper,tag=delta.launcher,distance=..1.5] if score @s delta.internal.id = $temp delta.internal.id at @s run tp @s ~ ~-1000 ~
 
