@@ -10,7 +10,7 @@
 #define storage random:output
 #define storage random:data
 
-# Create scoreboard objective and initialise LCG
+# Create scoreboard objective and initialize LCG
 scoreboard objectives add random dummy
 execute store result score #lcg_x random run seed
 

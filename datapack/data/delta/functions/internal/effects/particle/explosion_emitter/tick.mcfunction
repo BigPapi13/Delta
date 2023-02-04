@@ -9,7 +9,7 @@ scoreboard players add $temp delta.internal.size 130000
 
 scoreboard players set $remaining_particles delta.internal.math 0
 function delta:internal/effects/particle/explosion_emitter/spawn_recursive_particles
-execute as @e[type=snowball,tag=delta.explosion_particle.init] run function delta:internal/effects/particle/explosion/initialize
+execute as @e[type=snowball,tag=delta.explosion_particle.init,distance=..7] run function delta:internal/effects/particle/explosion/initialize
 tp @s ~ ~ ~
 
 scoreboard players add @s delta.internal.lifetime 1

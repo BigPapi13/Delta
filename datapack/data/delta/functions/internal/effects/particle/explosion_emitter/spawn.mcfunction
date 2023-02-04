@@ -2,4 +2,4 @@
 #   Replicates the explosion_emitter particle effect
 
 summon marker ~ ~ ~ {Tags:["delta.explosion_emitter","delta.explosion_emitter.init","global.ignore"]}
-execute as @e[type=marker,tag=delta.explosion_emitter.init] run function delta:internal/effects/particle/explosion_emitter/initialize
+execute as @e[type=marker,tag=delta.explosion_emitter.init,distance=..0.01] run function delta:internal/effects/particle/explosion_emitter/initialize
