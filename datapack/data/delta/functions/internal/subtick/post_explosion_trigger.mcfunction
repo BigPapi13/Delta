@@ -14,7 +14,7 @@ gamemode survival @s[scores={delta.internal.gamemode=3}]
 
 #Any entities ignoring the explosion are returned to normal
 execute anchored eyes positioned ^ ^ ^ positioned ~-2.5 ~-2.5 ~-2.5 align xyz as @e[type=!player,tag=delta.shifted,dx=4,dy=4,dz=4] at @s run function delta:internal/subtick/unshift_entity
-execute anchored eyes positioned ^ ^ ^ positioned ~-2.5 ~-2.5 ~-2.5 align xyz as @a[tag=!delta.ignore,dx=4,dy=4,dz=4] run function delta:internal/subtick/end_ignore_player
+execute anchored eyes positioned ^ ^ ^ positioned ~-2.5 ~-2.5 ~-2.5 align xyz as @a[tag=delta.ignored_player,dx=4,dy=4,dz=4] run function delta:internal/subtick/end_ignore_player
 
 #Revert mobGriefing gamerule if necessary
 execute if score $temp delta.internal.mobgriefing matches 1 run gamerule mobGriefing true
