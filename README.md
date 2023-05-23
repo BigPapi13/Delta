@@ -49,14 +49,24 @@ function delta:api/explosion_emitter_particle
 # Plays an explosion sound
 function delta:api/explosion_sound
 ```
-
+### Advanced particles
+If you would like to replicate the arguments of the particle command such as the spread and count, Delta provides a rough approximation like so:
+`particle minecraft:explosion ~ ~ ~ 3.5 1.2 0.24 0 10`
+will instead be written as:
+```mcfunction
+scoreboard players set $dx delta.api.particle 350
+scoreboard players set $dy delta.api.particle 120
+scoreboard players set $dz delta.api.particle 24
+scoreboard players set $count delta.api.particle 10
+function delta:api/explosion_particle
+```
+*Note: All of the above parameters must be set every time the function is called, otherwise it will default to a single particle. The parameters work for both `explosion` and `explosion_emitter`* 
 ## Limitations + Known Issues
 
 While this library is likely the closest we've gotten to perfect player motion manipulation, there are some limitations worth mentioning:
-- **Resource pack**: The included resource pack removes *all* explosion sounds and particles to clean up the creeper explosions used to push the player. While we've successfully managed to recreate explosion effects, detecting when to place those explosion effects back in the game is quite difficult.
-- **Lag**: While this pack will consistently apply the same amount of motion regardless of lag, the client may update the player's motion between creeper explosions, causing the player's position to jitter. This only occurs under very strenuous conditions (like simulating low-gravity), but it is still worth mentioning.
-- **MSPT Inconsistency**: Even though the motion applied is constant, the rate at which the server and client update may vary, and calling motion updates per tick may result in inconsistencies when these variations become too large. This could likely be remedied with worldborder checking, but I decided not to include it in this library for compatibility reasons.
-- **Advancement inconsistencies**: Some advancements will trigger their reward functions *after* entities are processed for the tick, meaning the player has a tick to move around before the explosion occurs, resulting in major inconsistencies in the motion applied. This can be fixed by scheduling the command to be run the next tick.
+- **Resource pack**: The included resource pack removes explosion particles and sounds, which are then manually reinserted into the game. Any other packs attempting to use normal explosion particles/sounds without using delta api calls will be unable to do so.
+- **MSPT Inconsistency**: Even though the motion applied is constant, the rate at which the server and client update may vary, and calling motion updates per tick may result in inconsistencies when these variations become too large. For consistent results, Delta should only be used for instantaneous bursts of motion, and continuous forces should instead rely on riding-based methods or levitation, depending on the context.
+- **Explosion Replication**: Delta has to manually detect every source of explosion particles and sounds in the game. Some of these sources are very difficult to detect both efficiently and consistently, so it is possible that an effect may not play when it is supposed to. However, for most sources this should be incredibly rare.
 - **Spigot/Paper**: ~~This pack uses negative explosion radius creepers, which do not affect player motion on spigot or paper servers.~~ To make this pack work on paper, Nico314159 has made a fix here: https://github.com/Nico314159/Paper-Negative-Explosions
 
 If you know any possible solutions or would like to help fixing these problems, please let me know!
