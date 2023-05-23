@@ -1,0 +1,11 @@
+{
+    "values": [
+        "minecraft:creeper",
+        "minecraft:fireball",
+        "minecraft:end_crystal",
+        "minecraft:tnt_minecart",
+        "minecraft:wither_skull",
+        "minecraft:ender_dragon",
+        "minecraft:shulker_bullet"
+    ]
+}

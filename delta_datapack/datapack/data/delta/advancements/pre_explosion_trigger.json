@@ -1,0 +1,17 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:player_hurt_entity",
+        "conditions": {
+          "entity": {
+            "type": "minecraft:bat",
+            "nbt": "{Tags:[\"delta.pre_explosion\"]}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "delta:internal/subtick/pre_explosion_trigger"
+    }
+  }
+  

@@ -1,0 +1,16 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:placed_block",
+        "conditions": {
+          "player": [],
+          "item": {
+            "tag": "minecraft:beds"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "delta:internal/explosion_detection/setup/bed"
+    }
+}

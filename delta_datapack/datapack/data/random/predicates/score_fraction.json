@@ -1,0 +1,25 @@
+{
+	"condition": "minecraft:value_check",
+	"value": {
+		"min": 1,
+		"max": {
+			"type": "minecraft:score",
+			"score": "random",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "$b"
+			}
+		}
+	},
+	"range": {
+		"min": 1,
+		"max": {
+			"type": "minecraft:score",
+			"score": "random",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "$a"
+			}
+		}
+	}
+}

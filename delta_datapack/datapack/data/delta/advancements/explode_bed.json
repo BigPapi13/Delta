@@ -1,0 +1,20 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:item_used_on_block",
+        "conditions": {
+          "location": {
+            "block": {
+              "blocks": [
+                "minecraft:air",
+                "minecraft:fire"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "delta:internal/explosion_detection/bed"
+    }
+  }

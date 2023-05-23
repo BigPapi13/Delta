@@ -1,0 +1,26 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/potion_overlay",
+        "layer1": "item/lingering_potion"
+    },
+    "overrides": [
+      {"predicate": {"custom_model_data": 130000}, "model": "delta:particle/explosion_0"},
+      {"predicate": {"custom_model_data": 130001}, "model": "delta:particle/explosion_1"},
+      {"predicate": {"custom_model_data": 130002}, "model": "delta:particle/explosion_2"},
+      {"predicate": {"custom_model_data": 130003}, "model": "delta:particle/explosion_3"},
+      {"predicate": {"custom_model_data": 130004}, "model": "delta:particle/explosion_4"},
+      {"predicate": {"custom_model_data": 130005}, "model": "delta:particle/explosion_5"},
+      {"predicate": {"custom_model_data": 130006}, "model": "delta:particle/explosion_6"},
+      {"predicate": {"custom_model_data": 130007}, "model": "delta:particle/explosion_7"},
+      {"predicate": {"custom_model_data": 130008}, "model": "delta:particle/explosion_8"},
+      {"predicate": {"custom_model_data": 130009}, "model": "delta:particle/explosion_9"},
+      {"predicate": {"custom_model_data": 130010}, "model": "delta:particle/explosion_10"},
+      {"predicate": {"custom_model_data": 130011}, "model": "delta:particle/explosion_11"},
+      {"predicate": {"custom_model_data": 130012}, "model": "delta:particle/explosion_12"},
+      {"predicate": {"custom_model_data": 130013}, "model": "delta:particle/explosion_13"},
+      {"predicate": {"custom_model_data": 130014}, "model": "delta:particle/explosion_14"},
+      {"predicate": {"custom_model_data": 130015}, "model": "delta:particle/explosion_15"},
+      {"predicate": {"custom_model_data": 130255}, "model": "delta:transparent"}
+    ]
+}

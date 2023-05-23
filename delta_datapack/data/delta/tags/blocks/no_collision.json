@@ -1,0 +1,15 @@
+{
+    "values" : [
+        "minecraft:air",
+        "minecraft:cave_air",
+        "minecraft:void_air",
+        "#minecraft:flowers",
+        "minecraft:grass",
+        "minecraft:tall_grass",
+        "#minecraft:banners",
+        "minecraft:torch",
+        "minecraft:wall_torch",
+        "minecraft:soul_torch",
+        "minecraft:soul_wall_torch"
+    ]
+}

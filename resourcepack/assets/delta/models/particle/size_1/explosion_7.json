@@ -1,7 +1,0 @@
-{
-	"parent": "delta:particle/size_1/explosion",
-	"textures" : {
-		"layer0" : "particle/explosion_7",
-		"layer1" : "delta:transparent"
-	}
-}

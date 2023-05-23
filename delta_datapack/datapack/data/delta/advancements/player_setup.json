@@ -1,0 +1,11 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:tick"
+      }
+    },
+    "rewards": {
+      "function": "delta:internal/technical/initialize_player"
+    }
+  }
+  
