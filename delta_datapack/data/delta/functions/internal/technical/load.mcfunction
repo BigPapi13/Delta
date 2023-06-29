@@ -3,7 +3,6 @@
 
 #Start schedule loops
 schedule function delta:internal/technical/tick 1t replace
-schedule function delta:internal/technical/loop_1s 1t replace
 
 # Definitions for Data-pack Helper Plus
 #declare storage delta:storage
@@ -36,18 +35,10 @@ scoreboard objectives add delta.internal.x dummy
 scoreboard objectives add delta.internal.y dummy
 scoreboard objectives add delta.internal.z dummy
 scoreboard objectives add delta.internal.mobgriefing dummy
-scoreboard objectives add delta.internal.frame dummy
-scoreboard objectives add delta.internal.lifetime dummy
-scoreboard objectives add delta.internal.size dummy
-scoreboard objectives add delta.internal.explosion_size dummy
-scoreboard objectives add delta.internal.fuse dummy
 
 #TEAMS
 team add delta.no_collide
     team modify delta.no_collide collisionRule never
-
-#FUNCTIONS
-function delta:internal/technical/tick
 
 forceload remove 0 0
 forceload add 0 0
@@ -57,6 +48,3 @@ kill d59ee2c6-58c8-4885-b9db-ecff066e4439
 summon marker ~ ~ ~ {UUID: [I;-711007546,1489520773,-1176769281,107889721]}
 kill ba8a076c-9a37-49bb-bead-79c12d22458a
 summon marker ~ ~ ~ {UUID: [I;-1165359252,-1707652677,-1095927359,757220746]}
-
-#STORAGE
-data modify storage delta:storage data_to_apply set value {item:{id:"minecraft:lingering_potion",Count:1b,tag:{CustomModelData:130255,CustomPotionColor:16777215}},billboard:"center",brightness:{sky:15,block:15}}
