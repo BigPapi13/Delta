@@ -34,6 +34,6 @@ scoreboard players operation $input delta.internal.math -= $d delta.internal.mat
 function delta:internal/math/sqrt
 
 #Get atan2
-tp ba8a076c-9a37-49bb-bead-79c12d22458a ~ ~ ~
+tp d59ee2c6-58c8-4885-b9db-ecff066e4439 ~ ~ ~
 scoreboard players operation $adjusted_strength delta.internal.math /= #constant.2 delta.internal.math
-execute as ba8a076c-9a37-49bb-bead-79c12d22458a at @s run function delta:internal/math/arcsin_wrapper
+execute as d59ee2c6-58c8-4885-b9db-ecff066e4439 at @s run function delta:internal/math/arcsin_wrapper

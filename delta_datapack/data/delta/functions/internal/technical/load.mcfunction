@@ -45,6 +45,4 @@ forceload add 0 0
 
 #MARKERS
 kill d59ee2c6-58c8-4885-b9db-ecff066e4439
-summon marker ~ ~ ~ {UUID: [I;-711007546,1489520773,-1176769281,107889721]}
-kill ba8a076c-9a37-49bb-bead-79c12d22458a
-summon marker ~ ~ ~ {UUID: [I;-1165359252,-1707652677,-1095927359,757220746]}
+summon marker ~ ~ ~ {UUID: [I;-711007546,1489520773,-1176769281,107889721],Tags:["global.ignore"]}
