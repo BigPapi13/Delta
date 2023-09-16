@@ -17,5 +17,8 @@ execute if score $temp delta.internal.mobgriefing matches 1 run gamerule mobGrie
 #Revert difficulty if necessary
 execute if score $diff delta.internal.gamemode matches 0 run difficulty peaceful
 
+#return equipment
+loot replace entity @s weapon.mainhand mine 100001 0 100000 minecraft:debug_stick
+
 #Teleport self down
 tp @s ~ ~-1000 ~

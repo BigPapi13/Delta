@@ -18,6 +18,20 @@ gamemode creative
 #Teleport self up
 tp @s ~ ~1000 ~
 
+#Save equipment in shulker box
+item replace block 100000 0 100000 container.0 from entity @s weapon.mainhand
+item replace block 100000 0 100000 container.1 from entity @s weapon.offhand
+item replace block 100000 0 100000 container.2 from entity @s armor.feet
+item replace block 100000 0 100000 container.3 from entity @s armor.legs
+item replace block 100000 0 100000 container.4 from entity @s armor.chest
+item replace block 100000 0 100000 container.5 from entity @s armor.head
+
+#temporarily remove equipment
+item replace entity @s armor.feet with minecraft:air
+item replace entity @s armor.legs with minecraft:air
+item replace entity @s armor.chest with minecraft:air
+item replace entity @s armor.head with minecraft:air
+
 #Temporarily disable mobGriefing (not usually necessary unless a positive explosion radius creeper is used)
 execute store result score $temp delta.internal.mobgriefing run gamerule mobGriefing
 gamerule mobGriefing false

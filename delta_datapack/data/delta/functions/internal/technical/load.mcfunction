@@ -36,6 +36,10 @@ scoreboard objectives add delta.internal.y dummy
 scoreboard objectives add delta.internal.z dummy
 scoreboard objectives add delta.internal.mobgriefing dummy
 
+#place a shulker box to store equipment
+execute unless block 100000 -64 100000 light_blue_shulker_box run setblock 100001 -64 100000 light_blue_shulker_box
+execute unless block 100000 -63 100000 bedrock run setblock 100001 -63 100000 bedrock
+
 #TEAMS
 team add delta.no_collide
     team modify delta.no_collide collisionRule never
