@@ -12,8 +12,6 @@ gamemode creative @s[scores={delta.internal.gamemode=1}]
 gamemode spectator @s[scores={delta.internal.gamemode=2}]
 gamemode survival @s[scores={delta.internal.gamemode=3}]
 
-#Revert mobGriefing gamerule if necessary
-execute if score $temp delta.internal.mobgriefing matches 1 run gamerule mobGriefing true
 #Revert difficulty if necessary
 execute if score $diff delta.internal.gamemode matches 0 run difficulty peaceful
 

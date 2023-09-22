@@ -17,7 +17,3 @@ gamemode creative
 
 #Teleport self up
 tp @s ~ ~1000 ~
-
-#Temporarily disable mobGriefing (not usually necessary unless a positive explosion radius creeper is used)
-execute store result score $temp delta.internal.mobgriefing run gamerule mobGriefing
-gamerule mobGriefing false
