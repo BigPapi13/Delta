@@ -15,5 +15,8 @@ gamemode survival @s[scores={delta.internal.gamemode=3}]
 #Revert difficulty if necessary
 execute if score $diff delta.internal.gamemode matches 0 run difficulty peaceful
 
+# Revert equipment
+execute in overworld run loot replace entity @s weapon.mainhand mine 0 -64 0 minecraft:debug_stick
+
 #Teleport self down
 tp @s ~ ~-1000 ~
