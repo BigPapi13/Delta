@@ -12,7 +12,7 @@
 scoreboard players set $function_called delta.internal.dummy 1
 tag @s add delta.launch
 
-execute as ba8a076c-9a37-49bb-bead-79c12d22458a in minecraft:overworld positioned 0.0 0.0 0.0 run function delta:internal/math/polar_to_xyz
+execute as d59ee2c6-58c8-4885-b9db-ecff066e4439 in minecraft:overworld positioned 0.0 0.0 0.0 run function delta:internal/math/polar_to_xyz
 
 scoreboard players operation @s delta.internal.x += $out delta.internal.x
 scoreboard players operation @s delta.internal.y += $out delta.internal.y

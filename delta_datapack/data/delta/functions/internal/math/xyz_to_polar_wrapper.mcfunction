@@ -3,7 +3,6 @@
 
 #Get looking angle and strength
 tp @s 0.0 0.0 0.0
-
 execute at @s run function delta:internal/math/xyz_to_polar
 
 #Tp back to forceloaded chunks

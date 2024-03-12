@@ -34,6 +34,9 @@ scoreboard players operation $input delta.internal.math -= $d delta.internal.mat
 function delta:internal/math/sqrt
 
 #Get atan2
-tp ba8a076c-9a37-49bb-bead-79c12d22458a ~ ~ ~
 scoreboard players operation $adjusted_strength delta.internal.math /= #constant.2 delta.internal.math
-execute as ba8a076c-9a37-49bb-bead-79c12d22458a at @s run function delta:internal/math/arcsin_wrapper
+execute in overworld as d59ee2c6-58c8-4885-b9db-ecff066e4439 positioned 0.0 0.0 0.0 run function delta:internal/math/arcsin
+
+#Get relative to current angle
+execute store result storage delta:macros rotation.positive int 0.000001 run scoreboard players get $rotation_offset delta.internal.math
+execute store result storage delta:macros rotation.negative int -0.000001 run scoreboard players get $rotation_offset delta.internal.math

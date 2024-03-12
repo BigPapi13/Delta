@@ -23,3 +23,5 @@ execute facing entity @s feet run tp @s ~ ~ ~ ~ ~
 execute store result score $complementary_angle delta.internal.math run data get entity @s Rotation[1] 1000000
 scoreboard players set $rotation_offset delta.internal.math 90000000
 scoreboard players operation $rotation_offset delta.internal.math += $complementary_angle delta.internal.math
+
+execute in overworld run tp @s 0.0 0.0 0.0

@@ -44,3 +44,5 @@ scoreboard players operation $unit.x delta.internal.math > $unit.y delta.interna
 scoreboard players operation $unit.x delta.internal.math > $unit.z delta.internal.math
 
 scoreboard players operation $temp_strength delta.api.launch /= $unit.x delta.internal.math
+
+tp @s 0.0 0.0 0.0
