@@ -42,6 +42,11 @@ team add delta.no_collide
 forceload remove 0 0
 forceload add 0 0
 
+#Place Shulker Box
+execute unless block 0 -64 0 light_blue_shulker_box run setblock 100001 -64 100000 light_blue_shulker_box
+execute unless block 0 -63 0 bedrock run setblock 100001 -63 100000 bedrock
+
+
 #MARKERS
 kill d59ee2c6-58c8-4885-b9db-ecff066e4439
 summon marker ~ ~ ~ {UUID: [I;-711007546,1489520773,-1176769281,107889721],Tags:["global.ignore"]}
