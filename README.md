@@ -1,3 +1,10 @@
+# NOTE: Delta is no longer being maintained!
+Check out **Player Motion** instead: https://modrinth.com/datapack/player_motion
+
+Some kind folk from the MCC Discord server have been keeping up this project for newer versions as I have not had the time, and I recommend using their version instead!
+
+------
+
 # Delta
 Delta is an explosion-based player motion library that uses subtick timing to ensure that only one player is pushed by the blast.
 
